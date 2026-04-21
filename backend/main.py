@@ -1,5 +1,5 @@
-# © 2026 Aboubacar Sidick Meite (ApollonIUGB77) — All Rights Reserved
-"""PolySubCipher API — FastAPI backend."""
+﻿# Â© 2026 Aboubacar Sidick Meite (ApollonASM8977) â€” All Rights Reserved
+"""PolySubCipher API â€” FastAPI backend."""
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
@@ -7,11 +7,11 @@ from pydantic import BaseModel, Field
 
 from cipher import encrypt, decrypt
 
-# ── App ───────────────────────────────────────────────────────────────────────
+# â”€â”€ App â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 app = FastAPI(
     title="PolySubCipher API",
-    description="Polyalphabetic substitution cipher — encrypt & decrypt with step-by-step trace.",
+    description="Polyalphabetic substitution cipher â€” encrypt & decrypt with step-by-step trace.",
     version="1.0.0",
 )
 
@@ -22,13 +22,13 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# ── Models ────────────────────────────────────────────────────────────────────
+# â”€â”€ Models â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 class CipherRequest(BaseModel):
     text: str = Field(..., min_length=1, max_length=5000)
 
 
-# ── Routes ────────────────────────────────────────────────────────────────────
+# â”€â”€ Routes â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 @app.get("/")
 def root():
@@ -49,3 +49,4 @@ def decrypt_text(req: CipherRequest):
         return decrypt(req.text)
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
+

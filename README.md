@@ -1,4 +1,4 @@
-# PolySubCipher
+﻿# PolySubCipher
 
 ![Python](https://img.shields.io/badge/Python-3.11-blue?style=flat-square&logo=python)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.111-009688?style=flat-square&logo=fastapi)
@@ -6,7 +6,7 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript)
 ![License](https://img.shields.io/badge/License-All%20Rights%20Reserved-red?style=flat-square)
 
-> Polyalphabetic substitution cipher — web interface with step-by-step trace.  
+> Polyalphabetic substitution cipher â€” web interface with step-by-step trace.  
 > Original algorithm designed in Java (Information Security course), rewritten in Python.
 
 ---
@@ -26,12 +26,12 @@ Non-alphabetic characters (spaces, digits, punctuation) pass through unchanged.
 
 ## Features
 
-- 🔒 **Encrypt** plaintext using the 2-key polyalphabetic scheme
-- 🔓 **Decrypt** ciphertext back to plaintext
-- 📋 **Step-by-step trace** — see every character substitution in a table
-- 🗝️ **Key schedule viewer** — inspect both substitution alphabets
-- 📋 **Copy to clipboard** — one-click copy of the result
-- ⚡ Terminal aesthetic UI (dark + green glow)
+- ðŸ”’ **Encrypt** plaintext using the 2-key polyalphabetic scheme
+- ðŸ”“ **Decrypt** ciphertext back to plaintext
+- ðŸ“‹ **Step-by-step trace** â€” see every character substitution in a table
+- ðŸ—ï¸ **Key schedule viewer** â€” inspect both substitution alphabets
+- ðŸ“‹ **Copy to clipboard** â€” one-click copy of the result
+- âš¡ Terminal aesthetic UI (dark + green glow)
 
 ---
 
@@ -39,18 +39,18 @@ Non-alphabetic characters (spaces, digits, punctuation) pass through unchanged.
 
 ```
 PolySubCipher/
-├── backend/
-│   ├── cipher.py        # Cipher engine (encrypt / decrypt / trace)
-│   ├── main.py          # FastAPI app — /encrypt, /decrypt
-│   └── requirements.txt
-├── frontend/
-│   ├── src/
-│   │   ├── App.tsx
-│   │   └── components/
-│   │       └── StepsTable.tsx
-│   ├── vite.config.ts
-│   └── package.json
-└── README.md
+â”œâ”€â”€ backend/
+â”‚   â”œâ”€â”€ cipher.py        # Cipher engine (encrypt / decrypt / trace)
+â”‚   â”œâ”€â”€ main.py          # FastAPI app â€” /encrypt, /decrypt
+â”‚   â””â”€â”€ requirements.txt
+â”œâ”€â”€ frontend/
+â”‚   â”œâ”€â”€ src/
+â”‚   â”‚   â”œâ”€â”€ App.tsx
+â”‚   â”‚   â””â”€â”€ components/
+â”‚   â”‚       â””â”€â”€ StepsTable.tsx
+â”‚   â”œâ”€â”€ vite.config.ts
+â”‚   â””â”€â”€ package.json
+â””â”€â”€ README.md
 ```
 
 ---
@@ -72,7 +72,7 @@ PolySubCipher/
   "key_schedule": {
     "KEY_A": "tuvwxyzabcdefghijklmnopqrs",
     "KEY_B": "fghijklmnopqrstuvwxyzabcde",
-    "description": "Positions 1,2,4 → KEY_A | Position 3 → KEY_B (cycle of 4)"
+    "description": "Positions 1,2,4 â†’ KEY_A | Position 3 â†’ KEY_B (cycle of 4)"
   }
 }
 ```
@@ -109,8 +109,9 @@ Open [http://localhost:5173](http://localhost:5173)
 
 ## Author
 
-**Aboubacar Sidick Meite** — [@ApollonIUGB77](https://github.com/ApollonIUGB77)
+**Aboubacar Sidick Meite** â€” [@ApollonASM8977](https://github.com/ApollonASM8977)
 
 ---
 
-© 2026 Aboubacar Sidick Meite (ApollonIUGB77) — All Rights Reserved
+Â© 2026 Aboubacar Sidick Meite (ApollonASM8977) â€” All Rights Reserved
+
