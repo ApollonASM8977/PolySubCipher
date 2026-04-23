@@ -27,11 +27,11 @@ Non-alphabetic characters (spaces, digits, punctuation) pass through unchanged.
 ## Features
 
 - 🔒 **Encrypt** plaintext using the 2-key polyalphabetic scheme
-- ðŸ”“ **Decrypt** ciphertext back to plaintext
-- ðŸ“‹ **Step-by-step trace** — see every character substitution in a table
-- ðŸ—ï¸ **Key schedule viewer** — inspect both substitution alphabets
-- ðŸ“‹ **Copy to clipboard** — one-click copy of the result
-- âš¡ Terminal aesthetic UI (dark + green glow)
+- 🔓 **Decrypt** ciphertext back to plaintext
+- 📋 **Step-by-step trace** — see every character substitution in a table
+- 🗝️ **Key schedule viewer** — inspect both substitution alphabets
+- 📋 **Copy to clipboard** — one-click copy of the result
+- ⚡ Terminal aesthetic UI (dark + green glow)
 
 ---
 

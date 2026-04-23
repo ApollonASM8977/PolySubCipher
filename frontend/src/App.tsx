@@ -70,7 +70,7 @@ export default function App() {
             </h1>
           </div>
           <p className="text-xs text-term-muted font-mono">
-            Polyalphabetic substitution cipher — 2-key alternating scheme Â· positions 1,2,4 ↑ KEY_A Â· position 3 ↑ KEY_B
+            Polyalphabetic substitution cipher — 2-key alternating scheme · positions 1,2,4 ↑ KEY_A · position 3 ↑ KEY_B
           </p>
           <div className="h-px bg-term-border w-full" />
         </header>
@@ -123,7 +123,7 @@ export default function App() {
           >
             {loading
               ? <span className="flex items-center justify-center gap-2"><Loader2 size={15} className="animate-spin" /> Processing...</span>
-              : mode === 'encrypt' ? '🔒  Encrypt' : 'ðŸ”“  Decrypt'
+              : mode === 'encrypt' ? '🔒  Encrypt' : '🔓  Decrypt'
             }
           </button>
 
@@ -211,7 +211,7 @@ export default function App() {
 
           {/* Footer */}
           <p className="text-center text-term-muted/30 text-xs font-mono pt-4">
-            v1.0.0 Â· Original algorithm by Aboubacar Sidick Meite Â· Ported from Java
+            v1.0.0 · Original algorithm by Aboubacar Sidick Meite · Ported from Java
           </p>
           <p className="text-right text-term-muted/20 text-xs font-mono mt-1 pr-1">© ASM</p>
         </main>
