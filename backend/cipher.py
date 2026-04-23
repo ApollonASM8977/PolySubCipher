@@ -1,20 +1,20 @@
-﻿# Â© 2026 Aboubacar Sidick Meite (ApollonASM8977) â€” All Rights Reserved
+# © 2026 Aboubacar Sidick Meite (ApollonASM8977) — All Rights Reserved
 """
-PolySubCipher â€” Polyalphabetic substitution cipher engine.
+PolySubCipher — Polyalphabetic substitution cipher engine.
 
 Original algorithm by Aboubacar Sidick Meite (Java, Information Security course).
 Rewritten in Python with step-by-step tracing and no external file dependencies.
 
 Cipher mechanics:
   Two substitution alphabets alternate by character position (cycle of 4):
-    positions 1,2,4 â†’ KEY_A  (Caesar +19)
-    position  3     â†’ KEY_B  (Caesar +5)
+    positions 1,2,4 ↑ KEY_A  (Caesar +19)
+    position  3     ↑ KEY_B  (Caesar +5)
   Non-alphabetic characters pass through unchanged.
 """
 
 import string
 
-# â”€â”€ Substitution tables (inlined from original .txt files) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+# ── Substitution tables (inlined from original .txt files) ────────────────────
 
 KEY_A   = "tuvwxyzabcdefghijklmnopqrs"   # PolyKey2  (shift +19)
 KEY_B   = "fghijklmnopqrstuvwxyzabcde"   # PolyKey1  (shift +5)
@@ -23,7 +23,7 @@ DEC_B   = "vwxyzabcdefghijklmnopqrstu"   # Decrypt   (reverse of KEY_B, shift +2
 
 ALPHA   = string.ascii_lowercase          # abcdefghijklmnopqrstuvwxyz
 
-# â”€â”€ Key schedule (1-indexed, cycle of 4) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+# ── Key schedule (1-indexed, cycle of 4) ─────────────────────────────────────
 
 def _key_for_position(pos: int, mode: str) -> str:
     """Return the substitution alphabet for the given 1-based position."""
@@ -34,7 +34,7 @@ def _key_for_position(pos: int, mode: str) -> str:
         return DEC_B if cycle == 3 else DEC_A
 
 
-# â”€â”€ Core transform â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+# ── Core transform ─────────────────────────────────────────────────────────────
 
 def transform(text: str, mode: str) -> dict:
     """
@@ -82,7 +82,7 @@ def transform(text: str, mode: str) -> dict:
         "key_schedule": {
             "KEY_A": KEY_A,
             "KEY_B": KEY_B,
-            "description": "Positions 1,2,4 â†’ KEY_A | Position 3 â†’ KEY_B (cycle of 4)",
+            "description": "Positions 1,2,4 ↑ KEY_A | Position 3 ↑ KEY_B (cycle of 4)",
         },
     }
 

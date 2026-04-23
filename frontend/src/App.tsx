@@ -1,4 +1,4 @@
-﻿// Â© 2026 Aboubacar Sidick Meite (ApollonASM8977) â€” All Rights Reserved
+// © 2026 Aboubacar Sidick Meite (ApollonASM8977) — All Rights Reserved
 import { useState } from 'react'
 import axios from 'axios'
 import { Lock, Unlock, Copy, Check, ChevronDown, ChevronUp, AlertCircle, Loader2 } from 'lucide-react'
@@ -41,7 +41,7 @@ export default function App() {
       if (axios.isAxiosError(e)) {
         const d = e.response?.data?.detail
         if (d) setError(String(d))
-        else if (!e.response) setError('Cannot reach the server â€” make sure the backend is running on port 8000.')
+        else if (!e.response) setError('Cannot reach the server — make sure the backend is running on port 8000.')
         else setError(`Server error ${e.response.status}`)
       } else setError('Unexpected error.')
     } finally {
@@ -70,7 +70,7 @@ export default function App() {
             </h1>
           </div>
           <p className="text-xs text-term-muted font-mono">
-            Polyalphabetic substitution cipher â€” 2-key alternating scheme Â· positions 1,2,4 â†’ KEY_A Â· position 3 â†’ KEY_B
+            Polyalphabetic substitution cipher — 2-key alternating scheme Â· positions 1,2,4 ↑ KEY_A Â· position 3 ↑ KEY_B
           </p>
           <div className="h-px bg-term-border w-full" />
         </header>
@@ -123,7 +123,7 @@ export default function App() {
           >
             {loading
               ? <span className="flex items-center justify-center gap-2"><Loader2 size={15} className="animate-spin" /> Processing...</span>
-              : mode === 'encrypt' ? 'ðŸ”’  Encrypt' : 'ðŸ”“  Decrypt'
+              : mode === 'encrypt' ? '🔒  Encrypt' : 'ðŸ”“  Decrypt'
             }
           </button>
 
@@ -173,7 +173,7 @@ export default function App() {
                       <span className="text-term-text tracking-widest">{ALPHA}</span>
                     </div>
                     <div className="flex gap-3 items-start">
-                      <span className="text-term-green w-14 shrink-0 invisible">â€”</span>
+                      <span className="text-term-green w-14 shrink-0 invisible">—</span>
                       <span className="text-term-amber tracking-widest">{KEY_A}</span>
                     </div>
                     <div className="h-px bg-term-border my-1" />
@@ -182,7 +182,7 @@ export default function App() {
                       <span className="text-term-text tracking-widest">{ALPHA}</span>
                     </div>
                     <div className="flex gap-3 items-start">
-                      <span className="text-term-amber w-14 shrink-0 invisible">â€”</span>
+                      <span className="text-term-amber w-14 shrink-0 invisible">—</span>
                       <span className="text-term-green tracking-widest">{KEY_B}</span>
                     </div>
                     <p className="text-term-muted pt-1">{result.key_schedule.description}</p>
@@ -213,7 +213,7 @@ export default function App() {
           <p className="text-center text-term-muted/30 text-xs font-mono pt-4">
             v1.0.0 Â· Original algorithm by Aboubacar Sidick Meite Â· Ported from Java
           </p>
-          <p className="text-right text-term-muted/20 text-xs font-mono mt-1 pr-1">Â© ASM</p>
+          <p className="text-right text-term-muted/20 text-xs font-mono mt-1 pr-1">© ASM</p>
         </main>
       </div>
     </div>
